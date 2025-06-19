@@ -33,16 +33,16 @@ st.header("Alerts")
 for idx, row in df.iterrows():
     if row["Status"] == "Damaged":
         st.warning(
-            f"Product '{row['Name']}' (ID: {row['Product ID']}) is reported as DAMAGED. Please review immediately.", icon="🚨")[3]
+            f"Product '{row['Name']}' (ID: {row['Product ID']}) is reported as DAMAGED. Please review immediately.", icon="🚨")
     elif row["Status"] == "Misplaced":
         st.warning(
-            f"Product '{row['Name']}' (ID: {row['Product ID']}) is MISPLACED. Please investigate.", icon="🕵️")[3]
+            f"Product '{row['Name']}' (ID: {row['Product ID']}) is MISPLACED. Please investigate.", icon="🕵️")
 
 # Alert for low stock
 for idx, row in df.iterrows():
     if row["Status"] == "Low Stock":
         st.warning(
-            f"Product '{row['Name']}' (ID: {row['Product ID']}) is LOW on stock. Consider restocking.", icon="⚠️")[3]
+            f"Product '{row['Name']}' (ID: {row['Product ID']}) is LOW on stock. Consider restocking.", icon="⚠️")
 
 # --- Inventory Table ---
 st.header("Current Inventory")
